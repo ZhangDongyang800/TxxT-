@@ -1,0 +1,29 @@
+name: 发布插件
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: 校验插件清单
+        run: |
+          node -e "const fs=require('fs'); const m=JSON.parse(fs.readFileSync('manifest.json')); if(m.version !== process.env.GITHUB_REF_NAME.slice(1)) throw new Error('标签版本与 manifest.version 不一致')"
+      - name: 打包发布资产
+        run: |
+          mkdir release
+          zip -r "release/chapter-insights-${GITHUB_REF_NAME#v}.zip" manifest.json dist
+          cd release
+          sha256sum "chapter-insights-${GITHUB_REF_NAME#v}.zip" > SHA256SUMS.txt
+      - name: 创建 GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "$GITHUB_REF_NAME" release/*.zip release/SHA256SUMS.txt --title "章节洞察 $GITHUB_REF_NAME" --generate-notes

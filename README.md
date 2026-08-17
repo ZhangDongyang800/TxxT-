@@ -4,6 +4,23 @@ TxxT Add-on
 
 这个仓库是 TxxT 插件系统 v1 的最小可运行示例。它提供「章节洞察」面板：读取当前作品章节，展示总字数、平均字数和最长章节，并演示面板注册、命令注册与插件设置。
 
+## 发布测试插件
+
+`v*` 标签会触发 GitHub Actions：校验标签与 `manifest.json` 版本一致，生成根目录正确的 zip 和 `SHA256SUMS.txt`，并创建 GitHub Release。
+
+本地验证发布包：
+
+```powershell
+.\scripts\package.ps1
+```
+
+示例版本 `1.0.0` 的发布命令：
+
+```powershell
+git tag v1.0.0
+git push origin v1.0.0
+```
+
 ## 安装示例
 
 1. 打开 TxxT 顶栏的「工具 -> 插件」。
