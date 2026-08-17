@@ -1,0 +1,9 @@
+{
+  "id": "zhangdongyang800.chapter-insights",
+  "name": "章节洞察",
+  "version": "1.0.0",
+  "apiVersion": 1,
+  "entry": "dist/index.js",
+  "ui": { "panels": [{ "id": "insights", "title": "章节洞察" }] },
+  "permissions": ["novel.read", "ui.panel", "command.register"]
+}
