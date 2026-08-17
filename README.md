@@ -21,6 +21,10 @@ git tag v1.0.0
 git push origin v1.0.0
 ```
 
+## 测试市场索引
+
+[`marketplace/registry.json`](marketplace/registry.json) 是 TxxT 市场接入测试使用的静态索引。客户端通过 GitHub Raw 读取它，再下载固定版本的 GitHub Release 资产并校验 `sha256`；不会从分支源码或任意仓库地址直接安装。
+
 ## 安装示例
 
 1. 打开 TxxT 顶栏的「工具 -> 插件」。

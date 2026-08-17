@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-17T00:00:00.000Z",
+  "plugins": [
+    {
+      "id": "zhangdongyang800.chapter-insights",
+      "name": "章节洞察",
+      "description": "展示当前作品的章节数、总字数、平均字数和最长章节。",
+      "version": "1.0.0",
+      "repository": "https://github.com/ZhangDongyang800/TxxT-",
+      "downloadUrl": "https://github.com/ZhangDongyang800/TxxT-/releases/download/v1.0.0/chapter-insights-1.0.0.zip",
+      "sha256": "3152b146ab6f62f0747c7f40773465aec4e916b327d2e91c5c84ff7390be703c",
+      "apiVersion": 1,
+      "minAppVersion": "1.2.3",
+      "permissions": ["novel.read", "ui.panel", "command.register"]
+    }
+  ]
+}
