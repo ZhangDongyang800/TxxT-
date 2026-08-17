@@ -6,6 +6,14 @@
       "id": "zhangdongyang800.chapter-insights",
       "name": "章节洞察",
       "description": "展示当前作品的章节数、总字数、平均字数和最长章节。",
+      "author": "ZhangDongyang800",
+      "tags": ["写作统计", "章节分析", "示例插件"],
+      "highlights": [
+        "按当前作品实时汇总章节数、总字数与平均字数",
+        "快速定位字数最多的章节，观察创作节奏",
+        "提供刷新与精简列表命令，演示插件设置持久化"
+      ],
+      "updatedAt": "2026-08-17",
       "version": "1.0.0",
       "repository": "https://github.com/ZhangDongyang800/TxxT-",
       "downloadUrl": "https://github.com/ZhangDongyang800/TxxT-/releases/download/v1.0.0/chapter-insights-1.0.0.zip",
