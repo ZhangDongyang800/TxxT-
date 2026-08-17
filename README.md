@@ -23,6 +23,8 @@ git push origin v1.0.0
 
 [`marketplace/registry.json`](marketplace/registry.json) 是 TxxT 市场接入测试使用的静态索引。客户端通过 GitHub Raw 读取它，再下载固定版本的 GitHub Release 资产并校验 `sha256`；不会从分支源码或任意仓库地址直接安装。
 
+完整的代码归属、安装校验、仓库改名影响和正式市场建议见：[插件市场架构与接入流程](docs/marketplace-architecture.md)。
+
 ## 从开发到市场收录
 
 ```text
