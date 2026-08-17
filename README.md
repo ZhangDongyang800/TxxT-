@@ -124,7 +124,7 @@ zip 包的根目录必须直接包含 `manifest.json`，不要再包一层仓库
 
 ## 运行时 API
 
-入口脚本会得到 `txxt` 参数。它是异步消息 API，不会暴露宿主 DOM、Zustand store 或作品路径。
+入口脚本可使用沙箱内的全局 `txxt` 对象。它是异步消息 API，不会暴露宿主 DOM、Zustand store 或作品路径。
 
 ```js
 txxt.ui.registerPanel({ id: 'main' })
